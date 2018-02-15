@@ -26,11 +26,15 @@ Add a class called `DapperProductRepository` and enable the same methods impleme
 1. `UPDATE` a product's name with a particular `ProductId`
 1. `INSERT` a new product
 
+**Note:** At this point, you have both `DapperProductRepository` and `ProductRepository` implementing the same methods. Make an Interface called `IProductRepository` that both your classes can conform to.
+
 ### Step 4
-Add 2 methods to your `DapperProductRepository` class
+Add 2 methods to your `IProductRepository` interface:
 
 1. Add a method called `GetProductsWithReview` that performs an `INNER JOIN`
 1. Add a method called `GetProductsAndReviews` that performs a `LEFT JOIN`
+
+Then, add the implementation for both methods within your `DapperProductRepository` and `ProductRepository` classes.
 
 ### Step 5
 Make a pull request
